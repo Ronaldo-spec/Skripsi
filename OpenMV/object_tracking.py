@@ -13,7 +13,7 @@ sensor.skip_frames(time = 2000) # Skip some frames to let the image stabilize
 sensor.set_framerate(40)
 
 # Define the min/max LAB values we're looking for
-thresholds = (17, 100, 80, -40, -60, 20)
+thresholds = (41, 100, 80, -40, -60, 20)
 record_time = 60000 # 10 seconds in milliseconds
 
 clock = time.clock() # Instantiates a clock object
