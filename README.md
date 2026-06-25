@@ -12,6 +12,10 @@ The project focuses on classifying catfish fry into size categories based on cap
 
 The model was developed using **MobileNetV2 transfer learning** with TensorFlow/Keras, converted into TensorFlow Lite format, and deployed through OpenMV IDE for embedded camera testing.
 
+For a more detailed research summary, see:
+
+[Research Context](docs/research_context.md)
+
 ---
 
 ## Size Categories
@@ -30,7 +34,7 @@ The model was developed using **MobileNetV2 transfer learning** with TensorFlow/
 |---|---|
 | Camera | OpenMV Cam H7+ |
 | Camera position | Approximately 20 cm above aquarium |
-| Aquarium size | 20 cm x 15 cm |
+| Aquarium size | 20 cm x 15 cm x 15 cm |
 | Water depth | Approximately 0.5 cm |
 | Deployment tool | OpenMV IDE |
 
@@ -49,6 +53,19 @@ The model was developed using **MobileNetV2 transfer learning** with TensorFlow/
 
 ---
 
+## Experimental Configurations
+
+Four experimental configurations were compared during model development:
+
+| Configuration | Description |
+|---|---|
+| 96 x 96 blobs.fit | Image size 96 x 96 using blobs.fit |
+| 96 x 96 blobs.rect | Image size 96 x 96 using blobs.rect |
+| 128 x 128 blobs.fit | Image size 128 x 128 using blobs.fit |
+| 128 x 128 blobs.rect | Image size 128 x 128 using blobs.rect |
+
+---
+
 ## Dataset Variants
 
 Two dataset variants were used during experimentation:
@@ -62,12 +79,14 @@ Two dataset variants were used during experimentation:
 
 ## Model Evaluation Summary
 
-| Dataset Variant | Accuracy | Precision | Recall | F1-score |
-|---|---:|---:|---:|---:|
-| Fit | 64% | 0% | 47% | 0% |
-| Rectangle | 89% | 87% | 83% | 82% |
+The strongest configuration was **128 x 128 blobs.rect**.
 
-The **Rectangle dataset** produced the strongest result and became the better-performing experiment in this project.
+| Test Type | Accuracy | Precision | Recall | F1-score |
+|---|---:|---:|---:|---:|
+| Static image testing | 80% | 70% | 70% | 68% |
+| Real-time testing | 89% | 87% | 83% | 82% |
+
+The real-time testing result became the strongest portfolio highlight because it demonstrates that the model could be tested through the OpenMV-based workflow, not only through static image evaluation.
 
 ---
 
