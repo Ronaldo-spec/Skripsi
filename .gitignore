@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Jupyter / notebook checkpoints
+.ipynb_checkpoints/
+
+# Local environment
+.env
+*.env
+.vscode/
+.idea/
+
+# Large ML artifacts / local datasets
+# Keep final selected artifacts only when intentionally documented.
+dataset/
+datasets/
+data/raw/
+*.zip
+*.rar
+*.7z
+*.h5
+*.keras
+*.tflite
+
+# OS files
+.DS_Store
+Thumbs.db
