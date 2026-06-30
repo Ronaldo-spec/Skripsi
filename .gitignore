@@ -16,6 +16,12 @@ env/
 .vscode/
 .idea/
 
+# Editable source documents are intentionally excluded
+*.docx
+*.tmp
+*.bak
+~$*
+
 # Large ML artifacts / local datasets
 # Keep final selected artifacts only when intentionally documented.
 dataset/
