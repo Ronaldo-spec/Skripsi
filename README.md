@@ -1,14 +1,14 @@
-# Catfish Fry Size Classification using Computer Vision
+# Catfish Fry Size Classification using CNN and OpenMV
 
 Computer vision final project for classifying **catfish fry size categories** using CNN-based image classification and embedded deployment with **OpenMV Cam H7+**.
 
-This repository is documented as a portfolio project to show applied machine learning, image classification, dataset preparation, model evaluation, and edge AI deployment.
+This repository is documented as a portfolio project to show original research, applied machine learning, image classification, dataset preparation, model evaluation, TensorFlow Lite conversion, and edge AI deployment.
 
 ---
 
 ## Project Overview
 
-The project focuses on classifying catfish fry into size categories based on captured images. The goal is to support a more consistent and efficient size identification process compared with fully manual observation.
+The project focuses on classifying catfish fry into size categories based on captured images. The goal is to support a more consistent and efficient size identification process compared with fully manual grading.
 
 The model was developed using **MobileNetV2 transfer learning** with TensorFlow/Keras, converted into TensorFlow Lite format, and deployed through OpenMV IDE for embedded camera testing.
 
@@ -49,7 +49,7 @@ For a more detailed research summary, see:
 | Deployment Format | TensorFlow Lite `.tflite` |
 | Embedded Vision | OpenMV Cam H7+ |
 | Programming | Python |
-| Evaluation | Accuracy, Precision, Recall, F1-score |
+| Evaluation | Accuracy, Precision, Recall, F1-score, Confusion Matrix |
 
 ---
 
@@ -90,12 +90,23 @@ The real-time testing result became the strongest portfolio highlight because it
 
 ---
 
+## Reports
+
+| Report | Description |
+|---|---|
+| [Indonesian Thesis Report - Secured PDF](docs/Catfish-Fry-Size-Classification_Ronaldo-Firmansyah_ID.pdf) | Original Indonesian thesis report in secured PDF format. |
+| [English Portfolio Report - Markdown](docs/Catfish-Fry-Size-Classification_Ronaldo-Firmansyah_EN.md) | English portfolio version rewritten for GitHub and LinkedIn review. |
+| [English Portfolio Report - Secured PDF](docs/Catfish-Fry-Size-Classification_Ronaldo-Firmansyah_EN.pdf) | English secured PDF version for portfolio distribution. |
+| [Report Security Note](docs/report_security_note.md) | Notes about PDF security limitations and repository scope. |
+
+---
+
 ## Workflow
 
 1. Capture catfish fry images using OpenMV camera setup.
 2. Prepare image dataset based on size categories.
 3. Train image classification model using MobileNetV2 transfer learning.
-4. Evaluate model using classification metrics.
+4. Evaluate model using classification metrics and confusion matrix.
 5. Convert trained model into TensorFlow Lite format.
 6. Deploy and test the model using OpenMV IDE.
 
@@ -111,6 +122,7 @@ This project demonstrates:
 - Model evaluation and comparison
 - TensorFlow Lite deployment
 - Embedded AI experimentation with OpenMV
+- Formal academic report writing
 
 ---
 
